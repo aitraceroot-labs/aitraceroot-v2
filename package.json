@@ -1,0 +1,19 @@
+{
+  "name": "aitraceroot-v2-frontend",
+  "version": "2.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "lint": "node scripts/lint.mjs",
+    "typecheck": "node scripts/typecheck.mjs",
+    "test": "node --test tests/*.test.mjs",
+    "build": "node scripts/build.mjs",
+    "preview": "node scripts/serve-dist.mjs",
+    "check:chinese": "node scripts/scan-chinese.mjs webroot/v2/src webroot/v2/index.html webroot/v2/offline.html webroot/v2/manifest.webmanifest scripts tests package.json",
+    "check:dist": "node scripts/verify-dist.mjs"
+  },
+  "devDependencies": {
+    "esbuild": "^0.25.8",
+    "javascript-obfuscator": "^4.1.1"
+  }
+}
