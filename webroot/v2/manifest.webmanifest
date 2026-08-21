@@ -1,0 +1,13 @@
+{
+  "name": "AITRACEROOT - AI Crypto Market Terminal",
+  "short_name": "AITRACE",
+  "start_url": "/v2/",
+  "scope": "/v2/",
+  "display": "standalone",
+  "background_color": "#06080c",
+  "theme_color": "#06080c",
+  "orientation": "any",
+  "icons": [
+    {"src":"/v2/favicon.svg","sizes":"any","type":"image/svg+xml","purpose":"any maskable"}
+  ]
+}

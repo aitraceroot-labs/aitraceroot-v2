@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" role="img" aria-label="ART">
+  <rect width="64" height="64" rx="14" fill="#02070a"/>
+  <circle cx="32" cy="32" r="25" fill="#06161a" stroke="#08e7f7" stroke-width="2"/>
+  <path d="M32 12l5.2 14.8L52 32l-14.8 5.2L32 52l-5.2-14.8L12 32l14.8-5.2L32 12z" fill="#e8fbff"/>
+  <circle cx="32" cy="32" r="6" fill="#06161a" stroke="#08e7f7" stroke-width="2"/>
+  <text x="32" y="58" fill="#08e7f7" font-family="Arial, sans-serif" font-size="8" font-weight="700" text-anchor="middle">ART</text>
+</svg>
