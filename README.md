@@ -2,7 +2,11 @@
 
 > AI-native crypto market and on-chain intelligence terminal.
 
-AITRACEROOT turns fragmented market, derivatives, wallet and risk data into one decision surface for crypto researchers and active traders. The terminal combines multi-chain discovery, Smart Money tracking, contract risk signals, derivatives context and an AI copilot in a fast installable web application.
+AITRACEROOT turns fragmented market, derivatives, wallet and risk data into one decision surface for crypto researchers and active traders. The terminal combines multi-chain discovery, Smart Money tracking, contract risk signals, derivatives context and an AI research assistant in a fast installable web application.
+
+## BNB Chain integration
+
+AITRACEROOT is built for the BNB Chain ecosystem and supports BSC, also known as BNB Smart Chain. Its public product scope covers market analysis, on-chain data, wallet analysis and risk monitoring across supported assets and networks.
 
 ## Why it matters
 
@@ -16,7 +20,7 @@ Crypto research is still split across explorers, charting tools, social feeds an
 - Contract and token risk workspace
 - Futures, funding and derivatives context
 - Alpha radar and watchlists
-- AI research copilot
+- AI research assistant
 - Responsive PWA experience
 
 ## Quick start
@@ -49,4 +53,3 @@ This repository is a public showcase edition. Live providers and private backend
 ## License
 
 Copyright © 2026 AITRACEROOT. Source-available under the terms in [LICENSE](LICENSE).
-
