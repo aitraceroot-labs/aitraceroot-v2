@@ -3,6 +3,16 @@
   "version": "2.0.0",
   "private": true,
   "type": "module",
+  "keywords": [
+    "AITRACEROOT",
+    "BNB",
+    "BNB Chain",
+    "BSC",
+    "BNB Smart Chain",
+    "Web3",
+    "on-chain analytics",
+    "crypto intelligence"
+  ],
   "scripts": {
     "lint": "node scripts/lint.mjs",
     "typecheck": "node scripts/typecheck.mjs",
@@ -17,3 +27,4 @@
     "javascript-obfuscator": "^4.1.1"
   }
 }
+
