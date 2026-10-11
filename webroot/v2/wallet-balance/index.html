@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="只读查询 EVM 钱包原生币和 ERC-20 代币余额。">
+  <title>Wallet Balance Check · 链上余额查询</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="page">
+    <div class="shell">
+      <header class="topbar">
+        <div class="brand">
+          <div class="brand-mark">◎</div>
+          <div>
+            <p class="eyebrow">ON-CHAIN READ ONLY</p>
+            <h1>链上钱包余额查询</h1>
+          </div>
+        </div>
+        <div class="top-note">多链 EVM · 原生币 + ERC‑20</div>
+      </header>
+
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">WALLET BALANCE CHECK</p>
+          <h2>输入地址，快速确认链上有没有余额。</h2>
+          <p>选择网络后读取最新区块中的余额。页面只调用公开 RPC 进行查询，不需要连接钱包，也不会签名或发送交易。</p>
+          <div class="badges">
+            <span class="badge">Ethereum</span>
+            <span class="badge">BNB Chain</span>
+            <span class="badge">Polygon</span>
+            <span class="badge">Arbitrum</span>
+            <span class="badge">Base</span>
+          </div>
+        </div>
+
+        <form id="balance-form" class="form-card">
+          <h3>开始查询</h3>
+          <div class="form-subtitle">Start a read-only balance check</div>
+
+          <label for="chain">网络</label>
+          <select id="chain">
+            <option value="ethereum">Ethereum</option>
+            <option value="bsc">BNB Smart Chain</option>
+            <option value="polygon">Polygon</option>
+            <option value="arbitrum">Arbitrum One</option>
+            <option value="base">Base</option>
+          </select>
+
+          <label for="wallet">钱包地址</label>
+          <input id="wallet" name="wallet" autocomplete="off" spellcheck="false" placeholder="0x…" required>
+          <div class="helper">支持 EVM 地址：0x + 40 位十六进制字符。</div>
+
+          <label for="token">ERC‑20 合约（可选）</label>
+          <input id="token" name="token" autocomplete="off" spellcheck="false" placeholder="留空则只查原生币">
+          <div class="helper">填写后会额外读取该合约的余额、符号和精度。</div>
+
+          <button id="submit-button" class="primary" type="submit">查询余额</button>
+          <div class="read-only">🔒 只读模式：不会请求签名，不会转账，也不会保存你的地址。</div>
+          <div id="status" class="status" aria-live="polite"></div>
+        </form>
+      </section>
+
+      <section id="result-card" class="result-card" aria-live="polite">
+        <div class="result-header">
+          <div class="result-title">
+            <h3>查询结果</h3>
+            <span id="result-chain" class="chain-pill">—</span>
+          </div>
+          <div id="checked-at" class="checked">—</div>
+        </div>
+        <div id="result-address" class="address">—</div>
+        <div class="balance-grid">
+          <div class="balance">
+            <div class="balance-label">原生币余额 · Native balance</div>
+            <div><span id="native-balance" class="balance-value">—</span><span id="native-unit" class="balance-unit"></span></div>
+            <div id="native-note" class="balance-note">—</div>
+            <div id="native-state" class="state zero">—</div>
+          </div>
+          <div id="token-balance-box" class="balance" style="display:none">
+            <div class="balance-label">ERC‑20 代币余额 · Token balance</div>
+            <div><span id="token-balance" class="balance-value">—</span><span id="token-unit" class="balance-unit"></span></div>
+            <div id="token-note" class="balance-note">—</div>
+            <div id="token-state" class="state zero">—</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="info-card">
+        <h3>使用说明</h3>
+        <p>余额以最新区块为准。公共 RPC 可能会限流；如果查询失败，稍等几秒或切换网络后再试。生产环境建议将 RPC 放到自己的后端代理，并加入缓存、限流、日志和多地址批量查询。</p>
+        <div class="info-list">
+          <div class="info-item"><strong>1</strong><br>选择链</div>
+          <div class="info-item"><strong>2</strong><br>粘贴钱包地址</div>
+          <div class="info-item"><strong>3</strong><br>查看是否有余额</div>
+        </div>
+      </section>
+
+      <div class="footer">Read-only balance lookup · No wallet connection · No transaction signing</div>
+    </div>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
